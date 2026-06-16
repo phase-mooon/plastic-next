@@ -1,0 +1,886 @@
+@font-face {
+  font-family: 'ClimateCrisisKR';
+  src: url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Nohtype/ClimateCrisisKRVF.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ivory: #FAF6EA;
+  --blue: #008BE0;
+  --pink: #FA88BC;
+  --green: #02B358;
+  --dark-green: #008B44;
+  --black: #181F1C;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+}
+
+.page {
+  width: 1420px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Header / Navigation
+========================= */
+
+.header {
+  width: 1420px;
+  height: 65px;
+  background-color: var(--ivory);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  width: 1420px;
+  height: 65px;
+  margin: 0 auto;
+  background-color: var(--ivory);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu {
+  width: 756px;
+  height: 65px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  width: 189px;
+  height: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--pink);
+}
+
+
+/* =========================
+   Common Section
+========================= */
+
+.section {
+  scroll-margin-top: 65px;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+  width: 1420px;
+  height: 600px;
+  background-color: var(--blue);
+}
+
+.hero img {
+  width: 1420px;
+  height: 600px;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================
+   Issue Section
+========================= */
+
+.issue {
+  width: 1420px;
+  height: 600px;
+  background-color: var(--ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+.issue-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 800px;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.issue-line {
+  position: absolute;
+  left: 96px;
+  top: 0;
+  width: 1px;
+  height: 416px;
+  background-color: var(--green);
+
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.issue-text {
+  position: absolute;
+  left: 115px;
+  top: 228px;
+  width: 476px;
+
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.issue-paragraph {
+  width: 476px;
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.issue-paragraph strong {
+  font-weight: 600;
+}
+
+.issue-paragraph-second {
+  margin-top: 20px;
+}
+
+.issue-paragraph-second span {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.issue.show .issue-line {
+  animation: lineDown 0.8s ease forwards;
+}
+
+.issue.show .issue-text {
+  animation: textFadeIn 0.7s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes lineDown {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Temporary Sections
+========================= */
+
+.temp-section {
+  width: 1420px;
+  height: 600px;
+  background-color: var(--ivory);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-section h2 {
+  color: var(--blue);
+  font-size: 40px;
+}
+
+.temp-section.pink {
+  background-color: var(--pink);
+}
+
+.temp-section.green {
+  background-color: var(--green);
+}
+
+/* =========================
+   Local Case Section
+========================= */
+
+.local-case {
+  width: 1420px;
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("images/03_local_case_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.local-case-title {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+
+/* 점 + 카드 전체 영역 */
+.local-case-content {
+  position: absolute;
+  left: 147px;
+  top: 149px;
+
+  height: 303px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* 양쪽 점 */
+.local-dots {
+  width: 40px;
+  height: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.local-dots span {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--dark-green);
+}
+
+.local-dots-left {
+  margin-right: 26px;
+}
+
+.local-dots-right {
+  margin-left: 26px;
+}
+
+/* 카드 전체 영역 */
+.local-card-area {
+  width: 990px;
+  height: 303px;
+
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* 카드 1개 */
+.local-card {
+  width: 182px;
+  height: 241px;
+
+  opacity: 0;
+  transform: translateY(calc(var(--card-y) + 40px));
+}
+
+.local-card-up {
+  --card-y: 0px;
+}
+
+.local-card-down {
+  --card-y: 62px;
+}
+
+.local-card-inner {
+  width: 182px;
+  height: 241px;
+  transition: transform 0.3s ease;
+}
+
+.local-card-inner img {
+  width: 182px;
+  height: 241px;
+  display: block;
+  object-fit: cover;
+}
+
+/* 카드 hover */
+.local-card:hover .local-card-inner {
+  transform: scale(1.06);
+}
+
+/* Local Case 등장 애니메이션 */
+.local-case.show .local-dots {
+  animation: localFadeUp 0.7s ease forwards;
+}
+
+.local-case.show .local-card {
+  animation: localCardFadeUp 0.7s ease forwards;
+}
+
+.local-case.show .local-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.local-case.show .local-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.local-case.show .local-card:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.local-case.show .local-card:nth-child(4) {
+  animation-delay: 0.35s;
+}
+
+.local-case.show .local-card:nth-child(5) {
+  animation-delay: 0.45s;
+}
+
+.local-case.show .local-dots-left {
+  animation-delay: 0s;
+}
+
+.local-case.show .local-dots-right {
+  animation-delay: 0.5s;
+}
+
+@keyframes localFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes localCardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--card-y) + 40px));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(var(--card-y));
+  }
+}
+
+/* =========================
+   Next Material Section
+========================= */
+
+.next-material {
+  width: 1420px;
+  height: 1850px;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("images/04_next_m_bg.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* 생분해 소재 영역 */
+.biodegradable {
+  width: 100%;
+  position: relative;
+  padding-top: 145px;
+}
+
+/* 소제목 */
+.next-title {
+  color: var(--white);
+  font-family: 'ClimateCrisisKR', 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+
+  font-variation-settings: "YEAR" 1990;
+  -webkit-text-stroke: 1px #595959;
+  text-shadow: none;
+}
+
+/* 카드 3개 영역 */
+.bio-card-area {
+  width: 1070px;
+  height: 506px;
+  margin: 24px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+
+/* 카드 이미지 */
+.bio-card {
+  width: 346px;
+  height: 506px;
+  object-fit: cover;
+  display: block;
+
+  opacity: 0;
+  transform: translateY(-45px);
+}
+
+/* 하단 설명 문구 */
+.bio-description {
+  width: 100%;
+  margin-top: 32px;
+
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(-25px);
+}
+
+/* 스크롤 도착 후 애니메이션 */
+.next-material.show .bio-card {
+  animation: bioCardDrop 0.8s ease forwards;
+}
+
+.next-material.show .bio-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.next-material.show .bio-card:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.next-material.show .bio-card:nth-child(3) {
+  animation-delay: 0.31s;
+}
+
+.next-material.show .bio-description {
+  animation: bioTextDrop 0.7s ease forwards;
+  animation-delay: 0.55s;
+}
+
+@keyframes bioCardDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bioTextDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* 하단 설명 문구 */
+.bio-description {
+  width: 100%;
+  margin-top: 32px;
+
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+
+/* 등장 전 설명 문구 */
+.bio-description {
+  opacity: 0;
+  transform: translateY(-25px);
+}
+
+/* 스크롤 도착 후 애니메이션 */
+.next-material.show .bio-card {
+  animation: bioCardDrop 0.75s ease forwards;
+}
+
+.next-material.show .bio-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.next-material.show .bio-card:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.next-material.show .bio-card:nth-child(3) {
+  animation-delay: 0.31s;
+}
+
+.next-material.show .bio-description {
+  animation: bioTextDrop 0.7s ease forwards;
+  animation-delay: 0.55s;
+}
+
+@keyframes bioCardDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bioTextDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- 차세대 소재 ---------- */
+
+.future-material {
+  width: 100%;
+  position: relative;
+  margin-top: 123px;
+}
+
+.future-title {
+  margin-bottom: 10px;
+}
+
+.future-description {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+
+.future-button-area {
+  width: 613px;
+  height: 86px;
+  margin: 39px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+
+.future-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.future-btn img {
+  max-width: 86px;
+  max-height: 86px;
+  display: block;
+  object-fit: contain;
+}
+
+.future-slider-wrap {
+  width: 1192px;
+  height: 550px;
+  margin: 20px auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 53px;
+}
+
+.future-arrow {
+  width: 53px;
+  height: 550px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.future-arrow img {
+  width: 32px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 오른쪽 화살표는 왼쪽 화살표 이미지를 좌우 반전 */
+.future-arrow-right img {
+  transform: scaleX(-1);
+}
+
+/* 봉지 프레임 전체 */
+.future-bag {
+  width: 980px;
+  height: 550px;
+  position: relative;
+}
+
+/* 고정 봉지 이미지 */
+.future-bag-frame {
+  width: 980px;
+  height: 550px;
+  display: block;
+  object-fit: contain;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+/* 봉지 안쪽에서 실제 내용이 바뀌는 영역 */
+.future-content-window {
+  width: 725px;
+  height: 390px;
+
+  position: absolute;
+  left: 127px;
+  top: 95px;
+
+  overflow: hidden;
+  z-index: 2;
+}
+
+.future-track {
+  width: 4350px;
+  height: 390px;
+  display: flex;
+  transition: transform 0.55s ease;
+}
+
+.future-content-img {
+  width: 725px;
+  height: 390px;
+  display: block;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* =========================
+   Action Section
+========================= */
+
+.action {
+  width: 1420px;
+  height: 625px;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("images/05_action.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.action-title {
+  position: absolute;
+  top: 107px;
+  left: 0;
+  width: 100%;
+
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+
+.action-image {
+  position: absolute;
+  top: 207px;
+  left: 50%;
+  transform: translateX(-50%) translateY(35px);
+
+  height: 280px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+
+  opacity: 0;
+}
+
+.action-dots {
+  position: absolute;
+  top: 507px;
+  left: 50%;
+  transform: translateX(-50%) translateY(25px);
+
+  width: 5px;
+  height: 42px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 0;
+}
+
+.action-dots span {
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--ivory);
+}
+
+/* Action 등장 애니메이션 */
+.action.show .action-image {
+  animation: actionFadeUpImage 0.75s ease forwards;
+}
+
+.action.show .action-dots {
+  animation: actionFadeUpDots 0.7s ease forwards;
+  animation-delay: 0.35s;
+}
+
+@keyframes actionFadeUpImage {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes actionFadeUpDots {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  width: 1420px;
+  height: 265px;
+  position: relative;
+  overflow: hidden;
+
+  background-image: url("images/06_footer.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.footer-text {
+  position: absolute;
+  top: 30px;
+  left: 180px;
+}
+
+.footer-main {
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.footer-name {
+  margin-top: 25px;
+
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}

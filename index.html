@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="myScript.js" defer></script>
+  <title>플라스틱, 다음의 포장</title>
+  <link rel="stylesheet" href="myStyle.css"/>
+  <link rel="icon" href="myFav.ico" type="image/x-icon">
+
+  <!-- Inter 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-menu">
+          <a href="#issue" class="nav-link active">Issue</a>
+          <a href="#local-case" class="nav-link">Local Case</a>
+          <a href="#next-material" class="nav-link">Next Material</a>
+          <a href="#action" class="nav-link">Action</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 1. 메인 이미지 영역 -->
+      <section id="hero" class="hero">
+        <img src="images/header_image.png" alt="플라스틱 다음의 포장 메인 이미지" />
+      </section>
+
+      <!-- 2. Issue 내용 영역 -->
+      <section id="issue" class="issue section">
+        <div class="issue-line"></div>
+
+        <div class="issue-text">
+          <p class="issue-paragraph">
+            최근 식품업계에서는 <strong>중동 전쟁</strong>으로 인해 <strong>플라스틱 재료 수급이 어려워져 포장재 제작이 힘들어진다</strong>는 소식이 이슈가 되었습니다.
+            동시에 <strong>플라스틱 소비를 줄여야한다는 목소리</strong>가 증가하고 있으나,
+            현실적인 문제(비용, 설비 등)를 이유로 기업 입장에서 도입하기가 쉽지 않은 상황입니다.
+          </p>
+
+          <p class="issue-paragraph issue-paragraph-second">
+            미래와 환경을 위해 <strong>플라스틱을 대체할 방법</strong>을 찾을 필요가 있습니다.<br>
+            긍적적이게도 이미 많은 곳에서 변화의 움직임은 시작되고 있는데요.<br>
+            <span>플라스틱, 그 다음의 포장은 어떻게 발전할 수 있을까요?</span>
+          </p>
+        </div>
+
+        <img class="issue-image" src="images/02_war.png" alt="플라스틱 이슈 이미지" />
+      </section>
+
+      <!-- 3. Local Case 영역 -->
+        <section id="local-case" class="local-case section">
+        <p class="local-case-title">
+            이미 우리나라 기업들도 환경을 위한 다양한 포장과 정책을 시도하고 있습니다.
+        </p>
+
+        <div class="local-case-content">
+            <div class="local-dots local-dots-left">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+
+            <div class="local-card-area">
+            <div class="local-card local-card-down">
+                <div class="local-card-inner">
+                <img src="images/Group 54.png" alt="농심 카드" />
+                </div>
+            </div>
+
+            <div class="local-card local-card-up">
+                <div class="local-card-inner">
+                <img src="images/Group 55.png" alt="해태 카드" />
+                </div>
+            </div>
+
+            <div class="local-card local-card-down">
+                <div class="local-card-inner">
+                <img src="images/Group 56.png" alt="풀무원 카드" />
+                </div>
+            </div>
+
+            <div class="local-card local-card-up">
+                <div class="local-card-inner">
+                <img src="images/Group 57.png" alt="CJ 카드" />
+                </div>
+            </div>
+
+            <div class="local-card local-card-down">
+                <div class="local-card-inner">
+                <img src="images/Group 58.png" alt="CU 카드" />
+                </div>
+            </div>
+            </div>
+
+            <div class="local-dots local-dots-right">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+        </div>
+        </section>
+
+      <!-- 4. Next Material 영역 -->
+        <section id="next-material" class="next-material section">
+        <div class="biodegradable">
+            <h2 class="next-title">생분해 소재</h2>
+
+            <div class="bio-card-area">
+            <img class="bio-card" src="images/pla.png" alt="PLA 생분해 소재 카드" />
+            <img class="bio-card" src="images/pha.png" alt="PHA 생분해 소재 카드" />
+            <img class="bio-card" src="images/pbat.png" alt="PBAT 생분해 소재 카드" />
+            </div>
+
+            <p class="bio-description">
+            이런 소재들은 기존 플라스틱보다는 친환경적이지만, 특정 산업용 퇴비화 조건(고온·고습)이 충족되어야 분해된다는 한계가 있습니다.
+            </p>
+        </div>
+
+    <!-- 차세대 소재 -->
+        <div class="future-material">
+        <h2 class="next-title future-title">차세대 소재</h2>
+
+        <p class="future-description">
+            생분해 소재들보다 상용화가 힘들고 아직 연구가 더 필요하지만,<br>
+            포장재 자체가 식용, 비료가 될 수 있는 소재들이 있습니다.
+        </p>
+
+        <div class="future-button-area">
+            <button class="future-btn active" type="button" data-index="0">
+            <img
+                src="images/icon_01_1.png"
+                data-normal="images/icon_01.png"
+                data-active="images/icon_01_1.png"
+                alt="차세대 소재 버튼 1"
+            />
+            </button>
+
+            <button class="future-btn" type="button" data-index="1">
+            <img
+                src="images/icon_02.png"
+                data-normal="images/icon_02.png"
+                data-active="images/icon_02_1.png"
+                alt="차세대 소재 버튼 2"
+            />
+            </button>
+
+            <button class="future-btn" type="button" data-index="2">
+            <img
+                src="images/icon_03.png"
+                data-normal="images/icon_03.png"
+                data-active="images/icon_03_1.png"
+                alt="차세대 소재 버튼 3"
+            />
+            </button>
+
+            <button class="future-btn" type="button" data-index="3">
+            <img
+                src="images/icon_04.png"
+                data-normal="images/icon_04.png"
+                data-active="images/icon_04_1.png"
+                alt="차세대 소재 버튼 4"
+            />
+            </button>
+
+            <button class="future-btn" type="button" data-index="4">
+            <img
+                src="images/icon_05.png"
+                data-normal="images/icon_05.png"
+                data-active="images/icon_05_1.png"
+                alt="차세대 소재 버튼 5"
+            />
+            </button>
+
+            <button class="future-btn" type="button" data-index="5">
+            <img
+                src="images/icon_06.png"
+                data-normal="images/icon_06.png"
+                data-active="images/icon_06_1.png"
+                alt="차세대 소재 버튼 6"
+            />
+            </button>
+        </div>
+
+        <div class="future-slider-wrap">
+            <button class="future-arrow future-arrow-left" type="button">
+            <img src="images/arrow.png" alt="이전 소재 보기" />
+            </button>
+
+            <div class="future-bag">
+            <img
+                class="future-bag-frame"
+                src="images/pb.png"
+                alt="차세대 소재 봉지 프레임"
+            />
+
+            <div class="future-content-window">
+                <div class="future-track">
+                <img class="future-content-img" src="images/m01_crab.png" alt="차세대 소재 내용 1" />
+                <img class="future-content-img" src="images/m02_coting.png" alt="차세대 소재 내용 2" />
+                <img class="future-content-img" src="images/m03_mush.png" alt="차세대 소재 내용 3" />
+                <img class="future-content-img" src="images/m04_ooho.png" alt="차세대 소재 내용 4" />
+                <img class="future-content-img" src="images/m05_milk.png" alt="차세대 소재 내용 5" />
+                <img class="future-content-img" src="images/m06_potato.png" alt="차세대 소재 내용 6" />
+                </div>
+            </div>
+            </div>
+
+            <button class="future-arrow future-arrow-right" type="button">
+            <img src="images/arrow.png" alt="다음 소재 보기" />
+            </button>
+        </div>
+        </div>
+        </section>
+
+
+
+      <!-- 5. Action 영역 -->
+      <section id="action" class="action section">
+        <p class="action-title">
+            이처럼 우리가 모르는 곳에서 친환경 소재에 대한 연구와 변화가 계속 되고 있습니다.<br>
+            그렇다면 일반 소비자인 우리가 할 수 있는 일은 무엇일까요?
+        </p>
+
+        <img class="action-image" src="images/action.png" alt="소비자가 할 수 있는 행동 안내 이미지" />
+
+        <div class="action-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-text">
+        <p class="footer-main">
+        @2026 HKNU Digital Publishing1<br>
+        플라스틱, 다음의 포장
+        </p>
+
+        <p class="footer-name">
+        2026910129 문지현
+        </p>
+    </div>
+    </footer>
+  </div>
+
+</body>
+</html>
