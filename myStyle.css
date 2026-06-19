@@ -468,18 +468,94 @@ body {
 }
 
 
-/* 카드 이미지 */
+/* =========================
+   생분해 소재 카드
+========================= */
+
+/* 카드 3개 전체 영역 */
+.bio-card-area {
+  width: 1084px;
+  height: 512px;
+  margin: 32px auto 0;
+
+  display: flex;
+  gap: 14px;
+}
+
+/* 카드 한 개 */
 .bio-card {
-  width: 346px;
-  height: 506px;
-  object-fit: cover;
-  display: block;
+  width: 352px;
+  height: 512px;
+
+  padding-top: 31px;
+  background-image: url("images/Rectangle 6.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
 
   opacity: 0;
   transform: translateY(-45px);
 }
 
-/* 하단 설명 문구 */
+/* PLA / PHA / PBAT */
+.bio-card-title {
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 영문 소재명 */
+.bio-card-name {
+  margin-top: 12px;
+
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+/* 소재 설명 */
+.bio-card-description {
+  width: 308px;
+  min-height: 69px;
+  margin: 18px auto 0;
+
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+}
+
+/* 제품 이미지 */
+.bio-card-image {
+  width: 308px;
+  height: 247px;
+  margin: 18px auto 0;
+
+  display: block;
+  object-fit: contain;
+}
+
+/* 카드 하단 활용 분야 */
+.bio-card-use {
+  margin-top: 22px;
+
+  color: var(--green);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  text-align: center;
+}
+
+/* 카드 아래 전체 설명 */
 .bio-description {
   width: 100%;
   margin-top: 32px;
@@ -495,73 +571,7 @@ body {
   transform: translateY(-25px);
 }
 
-/* 스크롤 도착 후 애니메이션 */
-.next-material.show .bio-card {
-  animation: bioCardDrop 0.8s ease forwards;
-}
-
-.next-material.show .bio-card:nth-child(1) {
-  animation-delay: 0.05s;
-}
-
-.next-material.show .bio-card:nth-child(2) {
-  animation-delay: 0.18s;
-}
-
-.next-material.show .bio-card:nth-child(3) {
-  animation-delay: 0.31s;
-}
-
-.next-material.show .bio-description {
-  animation: bioTextDrop 0.7s ease forwards;
-  animation-delay: 0.55s;
-}
-
-@keyframes bioCardDrop {
-  from {
-    opacity: 0;
-    transform: translateY(-45px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bioTextDrop {
-  from {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* 하단 설명 문구 */
-.bio-description {
-  width: 100%;
-  margin-top: 32px;
-
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 25px;
-  text-align: center;
-}
-
-/* 등장 전 설명 문구 */
-.bio-description {
-  opacity: 0;
-  transform: translateY(-25px);
-}
-
-/* 스크롤 도착 후 애니메이션 */
+/* 스크롤 시 카드 등장 */
 .next-material.show .bio-card {
   animation: bioCardDrop 0.75s ease forwards;
 }
@@ -739,6 +749,100 @@ body {
   display: block;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+/* =========================
+   차세대 소재 슬라이드
+========================= */
+
+.future-content-slide {
+  width: 728px;
+  height: 390px;
+  position: relative;
+  flex-shrink: 0;
+
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+}
+
+/* 왼쪽 상단 제목 영역 */
+.future-slide-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 작은 제목 */
+.future-small-title {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* 큰 제목 */
+.future-big-title {
+  margin-top: 4px;
+
+  color: var(--blue);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 43px;
+}
+
+/* 오른쪽 상단 일러스트 */
+.future-slide-icon {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+
+  width: 128px;
+  height: 103px;
+  object-fit: contain;
+}
+
+/* 왼쪽 실사 이미지 */
+.future-slide-photo {
+  position: absolute;
+  left: 0;
+  top: 125px;
+
+  width: 340px;
+  height: 245px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 오른쪽 본문 전체 */
+.future-slide-text {
+  position: absolute;
+  left: 365px;
+  top: 122px;
+
+  width: 348px;
+}
+
+/* 각 본문 묶음 */
+.future-text-group {
+  margin-bottom: 16px;
+}
+
+/* 특징 / 활용 반경 / 분해 */
+.future-text-group h4 {
+  margin-bottom: 3px;
+
+  color: var(--pink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+/* 각 카테고리의 내용 */
+.future-text-group p {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /* =========================
